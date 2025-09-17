@@ -6,6 +6,7 @@ extends Node
 @onready var action_container: ActionContainer = $ActionContainer
 
 
+# TODO: replace this with an A* search
 func find_lowest_cost_path(goal: Goal, current_state: State) -> Array[Action]:
 	var actions: Array[Action] = []
 
