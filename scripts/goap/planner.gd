@@ -50,6 +50,9 @@ func _continue_path(
 		var new_node := ActionNode.new(parent.total_cost, action, state, parent)
 		_continue_path(goal, new_node.action.resultant(state), new_node, ending_nodes)
 
+		if new_node.action.resultant(state).durability < 0:
+			print_debug("gug")
+
 
 class ActionNode:
 	var total_cost: float

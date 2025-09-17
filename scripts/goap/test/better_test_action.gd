@@ -7,7 +7,7 @@ func run(_agent):
 
 
 func is_available(state: State) -> bool:
-	return state is PlannerTreeState and state.trees > 1
+	return state is PlannerTreeState and state.trees > 1 and state.durability > 0
 
 
 func cost(_state: State) -> int:
@@ -18,4 +18,4 @@ func resultant(state: State) -> State:
 	if state is not PlannerTreeState:
 		return null
 
-	return PlannerTreeState.new(state.trees - 2)
+	return PlannerTreeState.new(state.trees - 2, state.durability - 1)

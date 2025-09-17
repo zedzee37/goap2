@@ -21,5 +21,5 @@ func resultant(state: State) -> State:
 	if state is not PlannerTreeState:
 		return null
 
-	return PlannerTreeState.new(state.trees - 1)
+	return PlannerTreeState.new(state.trees - 1, state.durability + 1.0)
 
