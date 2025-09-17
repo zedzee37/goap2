@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://b26i8rkoa13cd"]
+
+[ext_resource type="Script" uid="uid://bnajaafsnydhp" path="res://addons/gd_test/scripts/test_system.gd" id="1_my7rq"]
+[ext_resource type="Script" uid="uid://bvjl4blkvscs8" path="res://test/priority_queue/priority_queue_test.gd" id="2_h1lgr"]
+
+[node name="PriorityQueueTests" type="Node"]
+script = ExtResource("1_my7rq")
+metadata/_custom_type_script = "uid://bnajaafsnydhp"
+
+[node name="PriorityQueueTest" type="Node" parent="."]
+script = ExtResource("2_h1lgr")
+metadata/_custom_type_script = "uid://c2sgk2rl7njgi"

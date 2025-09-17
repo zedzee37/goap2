@@ -10,8 +10,8 @@ func is_available(state: State) -> bool:
 	return state is PlannerTreeState and state.trees > 1 and state.durability > 0
 
 
-func cost(_state: State) -> int:
-	return 1
+func cost(_state: State) -> float:
+	return 1.0
 
 
 func resultant(state: State) -> State:

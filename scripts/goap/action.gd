@@ -11,7 +11,7 @@ func run(agent)
 
 
 @abstract
-func cost(state: State) -> int
+func cost(state: State) -> float
 
 
 @abstract

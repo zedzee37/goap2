@@ -14,5 +14,9 @@ func is_available(state: State) -> bool
 func is_fulfilled(state: State) -> bool
 
 
+@abstract
+func projected_cost(state: State) -> float
+
+
 func _to_string() -> String:
 	return goal_name

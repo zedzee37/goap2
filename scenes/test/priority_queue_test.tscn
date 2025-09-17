@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://b5ttxmy7fxr61"]
+
+[ext_resource type="Script" uid="uid://dvayrxsmwvjxg" path="res://addons/gd_test/scripts/test_manager.gd" id="1_3jj2w"]
+
+[node name="PriorityQueueTests" type="Node"]
+script = ExtResource("1_3jj2w")
+test_path = "res://test/priority_queue/"
+metadata/_custom_type_script = "uid://dvayrxsmwvjxg"

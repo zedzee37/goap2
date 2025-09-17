@@ -12,3 +12,7 @@ func is_available(state: State) -> bool:
 func is_fulfilled(state: State) -> bool:
 	return state is PlannerTreeState and state.trees == 0
 
+
+func projected_cost(state: State) -> float:
+	return state.trees
+

@@ -6,8 +6,8 @@ func run(_agent):
 	pass
 
 
-func cost(_state: State) -> int:
-	return 1
+func cost(_state: State) -> float:
+	return 2.0
 
 
 func is_available(_state: State) -> bool:
