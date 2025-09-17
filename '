@@ -31,6 +31,11 @@ func find_lowest_cost_path(goal: Goal, current_state: State) -> Array[Action]:
 	var path = null
 	while queue.size() > 0:
 		var current_node = queue.pop()
+		print()
+		print(current_node.action)
+		print("state: " +  str(current_node.state.trees))
+		print("cost: " + str(current_node.f_cost()))
+		print()
 
 		for action in action_container.actions:
 			if not action.is_available(current_node.state):
@@ -57,7 +62,7 @@ func find_lowest_cost_path(goal: Goal, current_state: State) -> Array[Action]:
 			break
 	
 	while path.parent != null:
-		actions.push_front(path.action)
+		actions.append(path.action)
 		path = path.parent
 	
 	return actions
