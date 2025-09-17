@@ -39,7 +39,7 @@ func find_lowest_cost_path(goal: Goal, current_state: State) -> Array[Action]:
 			var projected_state := action.resultant(current_node.state)
 
 			var node := ActionNode.new(
-				current_node.g_cost,
+				current_node.g_cost + 1,
 				goal.projected_cost(projected_state),
 				action,
 				current_node.state,
