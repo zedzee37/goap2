@@ -1,0 +1,41 @@
+[gd_scene load_steps=9 format=3 uid="uid://dqcwb4rfflf55"]
+
+[ext_resource type="Script" uid="uid://bnajaafsnydhp" path="res://addons/gd_test/scripts/test_system.gd" id="1_01ml1"]
+[ext_resource type="Script" uid="uid://chfom8me73ow5" path="res://scripts/goap/test/planner_tree_test.gd" id="2_8er0y"]
+[ext_resource type="Script" uid="uid://cbk8qyjbxl02h" path="res://scripts/goap/planner.gd" id="3_u71tc"]
+[ext_resource type="Script" uid="uid://b5a8ynckvh1cm" path="res://scripts/goap/action_container.gd" id="4_q3bv6"]
+[ext_resource type="Script" uid="uid://cdhxmh3asrn36" path="res://scripts/goap/goal_container.gd" id="5_gobkg"]
+[ext_resource type="Script" uid="uid://bjvv4b0gh6ll6" path="res://scripts/goap/test/better_test_action.gd" id="6_gobkg"]
+[ext_resource type="Script" uid="uid://7ic06wc01i8k" path="res://scripts/goap/test/test_action.gd" id="6_q3bv6"]
+[ext_resource type="Script" uid="uid://b5xuporlm4i38" path="res://scripts/goap/test/test_goal.gd" id="7_q3bv6"]
+
+[node name="PlannerTreeTest" type="Node2D"]
+script = ExtResource("1_01ml1")
+
+[node name="PlannerTreeTest" type="Node" parent="."]
+script = ExtResource("2_8er0y")
+
+[node name="Planner" type="Node" parent="PlannerTreeTest"]
+script = ExtResource("3_u71tc")
+metadata/_custom_type_script = "uid://cbk8qyjbxl02h"
+
+[node name="ActionContainer" type="Node" parent="PlannerTreeTest/Planner"]
+script = ExtResource("4_q3bv6")
+
+[node name="TestAction" type="Node" parent="PlannerTreeTest/Planner/ActionContainer"]
+script = ExtResource("6_q3bv6")
+action_name = "Cut Tree"
+metadata/_custom_type_script = "uid://7ic06wc01i8k"
+
+[node name="BetterTestAction" type="Node" parent="PlannerTreeTest/Planner/ActionContainer"]
+script = ExtResource("6_gobkg")
+action_name = "Better Test Action"
+metadata/_custom_type_script = "uid://bjvv4b0gh6ll6"
+
+[node name="GoalContainer" type="Node" parent="PlannerTreeTest/Planner"]
+script = ExtResource("5_gobkg")
+
+[node name="TestGoal" type="Node" parent="PlannerTreeTest/Planner/GoalContainer"]
+script = ExtResource("7_q3bv6")
+goal_name = "Cut All Trees"
+metadata/_custom_type_script = "uid://b5xuporlm4i38"

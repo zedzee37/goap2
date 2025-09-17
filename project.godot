@@ -17,3 +17,16 @@ config/icon="res://icon.svg"
 [dotnet]
 
 project/assembly_name="goap2"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/gd_test/plugin.cfg")
+
+[file_customization]
+
+folder_colors={
+"res://addons/": "pink",
+"res://scenes/": "red",
+"res://scripts/": "purple",
+"res://test/": "orange"
+}
